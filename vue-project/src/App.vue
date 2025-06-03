@@ -1,13 +1,10 @@
 <template>
-  <p>Using text interpolation: {{ rawHtml }}</p>
-<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+  <h1 :class='titleClass'> Make me red</h1>
 </template>
 
-<script lang="ts">
-  export default {
-    name: 'App',
-  
-  }
+<script setup>
+  import { ref } from 'vue'
+  const titleClass =ref('title')
 
 </script>
 

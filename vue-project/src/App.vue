@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <h1>
-    你好啊
-  </h1>
-  </div>
+  <p>Using text interpolation: {{ rawHtml }}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
 </template>
 
 <script lang="ts">

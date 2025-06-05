@@ -1,7 +1,7 @@
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import js from '@eslint/js'
-import pluginVue from 'eslint-plugin-vue'
+import pluginVue, { rules } from 'eslint-plugin-vue'
 
 export default defineConfig([
   {
@@ -18,6 +18,9 @@ export default defineConfig([
       },
     },
   },
+  rules({
+    'vue/multi-word-component-names': 'off', // 关闭组件名必须是多词的规则
+  }),
 
   js.configs.recommended,
   ...pluginVue.configs['flat/essential'],
